@@ -11,7 +11,7 @@ string localisation exists in the assets/config/lang folder.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
-## Development server
+## Installation
 
 To setup the project run `npm install`.
 
