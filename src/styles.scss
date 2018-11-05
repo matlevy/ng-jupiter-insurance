@@ -1,0 +1,40 @@
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+.mat-chip {
+    margin: 0 8px 8px 0 !important;
+}
+
+.mat-step-header {
+    padding: 0 !important;
+}
+
+body,
+.mat-stepper-horizontal {
+    background-color: rgb(31, 105, 201);
+}
+
+.mat-step-label,
+.mat-step-label.mat-step-label-active {
+    color: white !important;
+}
+
+app-dynamic-form-input
+.form-input {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-buttons-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1.title {
+    color: white !important;
+    margin-top: 30px;
+}

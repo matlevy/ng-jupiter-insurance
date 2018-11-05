@@ -1,0 +1,7 @@
+<div  *ngIf="translation.getLangs().length>1">
+  <a href="javascript://" *ngFor="let language of translation.getLangs()" (click)="setLanguage(language)">
+    <div class="flag" [ngClass]="language">
+      {{ language }}
+    </div>
+  </a>
+</div>

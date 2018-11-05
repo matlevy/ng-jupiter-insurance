@@ -1,0 +1,17 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngIf="form.errors && form.errors.loadErrors; else falsyTemplate">
+        {{ 'APP.QUESTIONS.LOAD_ERROR' | translate }}
+    </div>
+    <ng-template #falsyTemplate>
+      <div *ngFor="let question of questions; let i=index">
+        <app-dynamic-form-input [question]="question" [form]="form"></app-dynamic-form-input>
+      </div>
+      <div class="form-buttons-footer">
+        <button *ngIf="form.valid" 
+          (click)="onSubmit()"
+          mat-raised-button color="primary" type="button" [disabled]="!form.valid">{{ 'APP.QUESTIONS.COMPONENT.NEXT' | translate }}</button>
+      </div>
+    </ng-template>
+  </form>
+</div>

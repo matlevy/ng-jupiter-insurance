@@ -1,0 +1,19 @@
+<div [formGroup]="form" class="form-input">
+  <h2>
+    <label [attr.for]="question.key">
+      {{question.label | translate}}
+    </label>
+  </h2>
+  <div class="errorMessage" *ngIf="!isValid"><p>{{question.validationText | translate}}</p></div>
+  <div [ngSwitch]="question.controlType">
+    <input #childControl *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key" [type]="question.type">
+    <select #childControl [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+    <app-country-select #childControl [group]="form" [controlName]="question.key" [question]="question" *ngSwitchCase="'country'"></app-country-select>
+    <app-date-select #childControl [group]="form" [controlName]="question.key" [question]="question" *ngSwitchCase="'date-select'"></app-date-select>
+    <app-travellers-list #childControl *ngSwitchCase="'travellers-list'"
+      [group]="form" [formArray]="form.controls[question.key]"
+      [question]="question"></app-travellers-list>
+  </div>
+</div>

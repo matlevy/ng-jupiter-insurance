@@ -1,0 +1,8 @@
+{
+    "agentId" : 222,
+    "endpoints": {
+        "countriesEndpoint": "http://europa.thefrontfelloff.com/api/destination/countries",
+        "regionsEndpoint": "http://europa.thefrontfelloff.com/api/destination/regions/",
+        "loggingEndpoint": "http://europa.tif-plc.eu/api/log"
+    }
+}

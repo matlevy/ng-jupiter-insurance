@@ -1,0 +1,10 @@
+<div [formGroup]="group">
+  <app-travellers-list-item 
+    *ngFor="let traveller of getTravellers(); let i=index"
+    [formGroupName]="question.key"
+    (remove)="removeTraveller(i)"
+    [question]="question" [group]="group.controls.travellers.controls[i]"></app-travellers-list-item>
+  <div>
+    <button mat-raised-button color="primary" type="button" (click)="add()">{{ 'APP.QUESTIONS.COMPONENT.TRAVELLERS.ADD' | translate }}</button>
+  </div>
+</div>

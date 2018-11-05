@@ -1,0 +1,14 @@
+<div [formGroup]="group">
+  <mat-form-field>
+    <input matInput type="text" placeholder="{{ 'APP.QUESTIONS.COMPONENT.TRAVELLERS.TRAVELLER.FIRST_NAME' | translate }}" [formControlName]="'forename'">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="{{ 'APP.QUESTIONS.COMPONENT.TRAVELLERS.TRAVELLER.LAST_NAME' | translate }}" [formControlName]="'surname'">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="{{ 'APP.QUESTIONS.COMPONENT.TRAVELLERS.TRAVELLER.AGE' | translate }}" [formControlName]="'age'">
+  </mat-form-field>
+  <button mat-button type="button" color="primary" (click)="removeItem()">
+      {{ 'APP.QUESTIONS.COMPONENT.TRAVELLERS.TRAVELLER.REMOVE' | translate }}
+  </button>
+</div>

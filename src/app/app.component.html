@@ -1,0 +1,10 @@
+<app-frameset>
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step label="{{ 'APP.TABS.DETAILS' | translate }}" [stepControl]="registrationComponent.formComponent.form">
+            <app-details-form #registrationComponent (saved)="processBasicDetails($event)"></app-details-form>
+        </mat-step>
+        <mat-step label="{{ 'APP.TABS.POLICIES' | translate }}" [stepControl]="form.get('quoteDetails')">
+            [TODO]
+        </mat-step>
+    </mat-horizontal-stepper>
+</app-frameset>

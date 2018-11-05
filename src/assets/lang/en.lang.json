@@ -1,0 +1,59 @@
+{
+    "APP" : {
+        "TITLE": "My Travel Insurance Title",
+        "TABS": {
+            "DETAILS" : "Quotation Details",
+            "POLICIES" : "Select A Policy"
+        },
+        "QUESTIONS" : {
+            "LOAD_ERROR" : "There were problems loading part of this form.",
+            "COMPONENT" : {
+                "COUNTRY" : {
+                    "ALT" : "Alternately search for a specific country:"
+                },
+                "DATE" : { 
+                    "SPECIFIC" : "Choose A Specific Date",
+                    "CAL" : {
+                        "SAME_DAY" : "[Today]",
+                        "NEXT_DAY" : "[Tomorrow]",
+                        "NEXT_WEEK" : "[Next] dddd",
+                        "LAST_DAY" : "[Yesterday]",
+                        "LAST_WEEK" : "[Last] dddd",
+                        "SAME_ELSE" : "DD/MM/YYYY"
+                    },
+                    "PERIOD" : {
+                        "SINGLE" : "day",
+                        "PL" : "days"
+                    }
+                },
+                "TRAVELLERS" : {
+                    "ADD" : "Add New Traveller",
+                    "TRAVELLER" : {
+                        "FIRST_NAME" : "Forename",
+                        "LAST_NAME" : "Surname",
+                        "AGE" : "Age",
+                        "REMOVE" : "Remove"
+                    }
+                },
+                "NEXT" : "Continue"
+            },
+            "TRAVELLING" : {
+                "TITLE" : "Where are you travelling to?",
+                "HELP" : "Select the country you are travelling to from the following list of regions."
+                
+            },
+            "START" : {
+                "TITLE" : "When should your cover start?",
+                "HELP" : "Choose the start date of you policy. The earliest date it can start on is today."
+            },
+            "EXPIRE" : {
+                "TITLE" : "When should your policy expire?",
+                "HELP" : "From the following options, select the length of time that your policy should be cover."
+            },
+            "TRAVELLERS" : {
+                "TITLE" : "Travellers",
+                "HELP" : "For each person travelling, enter their: forename, surname and age. You must add at least one adult to the form."
+            }
+        }
+    }
+}

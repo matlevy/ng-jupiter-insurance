@@ -1,0 +1,59 @@
+{
+    "APP" : {
+        "TITLE": "Mon assurance voyage",
+        "TABS": {
+            "DETAILS" : "Détails de la citation",
+            "POLICIES" : "Sélectionnez une stratégie"
+        },
+        "QUESTIONS" : {
+            "LOAD_ERROR" : "Des problèmes sont survenus lors du chargement d'une partie de ce formulaire.",
+            "COMPONENT" : {
+                "COUNTRY" : {
+                    "ALT" : "Alternativement rechercher un pays spécifique:"
+                },
+                "DATE" : { 
+                    "SPECIFIC" : "Choisissez une date spécifique",
+                    "CAL" : {
+                        "SAME_DAY" : "[Aujourd'hui]",
+                        "NEXT_DAY" : "[Demain]",
+                        "NEXT_WEEK" : "[Prochain] dddd",
+                        "LAST_DAY" : "[Yesterday]",
+                        "LAST_WEEK" : "[Hier] dddd",
+                        "SAME_ELSE" : "DD/MM/YYYY"
+                    },
+                    "PERIOD" : {
+                        "SINGLE" : "jour",
+                        "PL" : "jours"
+                    }
+                },
+                "TRAVELLERS" : {
+                    "ADD" : "Ajouter un voyageur",
+                    "TRAVELLER" : {
+                        "FIRST_NAME" : "Prénom",
+                        "LAST_NAME" : "Nom de famille",
+                        "AGE" : "Âge",
+                        "REMOVE" : "Retirer"
+                    }
+                },
+                "NEXT" : "Continuer"
+            },
+            "TRAVELLING" : {
+                "TITLE" : "Ou-va tu voyager?",
+                "HELP" : "Sélectionnez le pays dans lequel vous vous rendez dans la liste de régions suivante."
+                
+            },
+            "START" : {
+                "TITLE" : "Quand votre couverture devrait-elle commencer?",
+                "HELP" : "Choisissez la date de début de votre politique. La première date à laquelle il peut commencer est aujourd'hui."
+            },
+            "EXPIRE" : {
+                "TITLE" : "Quand votre police devrait-elle expirer?",
+                "HELP" : "Parmi les options suivantes, sélectionnez la durée pendant laquelle votre police doit être couverte."
+            },
+            "TRAVELLERS" : {
+                "TITLE" : "Voyageurs",
+                "HELP" : "Pour chaque personne voyageant, entrez leur: prénom, nom et âge. Vous devez ajouter au moins un adulte au formulaire."
+            }
+        }
+    }
+}

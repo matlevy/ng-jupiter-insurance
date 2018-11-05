@@ -1,0 +1,57 @@
+{
+    "questions": [
+        {
+            "key": "destination",
+            "label": "APP.QUESTIONS.TRAVELLING.TITLE",
+            "value": null,
+            "validators": ["required"],
+            "validationText": "APP.QUESTIONS.TRAVELLING.HELP",
+            "agentId": "",
+            "order": 1,
+            "controlType": "country"
+        },
+        {
+            "key": "start",
+            "label": "APP.QUESTIONS.START.TITLE",
+            "value": null,
+            "validators": ["required"],
+            "validationText": "APP.QUESTIONS.START.HELP",
+            "common": [0, 1, 2, 3, 4, 5],
+            "lookaheadType": "days",
+            "displayType": "calendar",
+            "order": 2,
+            "controlType": "date-select"
+        },
+        {
+            "key": "end",
+            "label": "APP.QUESTIONS.EXPIRE.TITLE",
+            "value": null,
+            "validators": ["required"],
+            "validationText": "APP.QUESTIONS.EXPIRE.HELP",
+            "common": [1, 2, 7, 10, 14, 365],
+            "lookaheadType": "days",
+            "displayType": "period",
+            "order": 3,
+            "controlType": "date-select"
+        },
+        {
+            "key": "travellers",
+            "label": "APP.QUESTIONS.TRAVELLERS.TITLE",
+            "value": null,
+            "required": true,
+            "validationText": "APP.QUESTIONS.TRAVELLERS.HELP",
+            "validators": ["hasAdults"],
+            "order": 4,
+            "childControl": {
+                "controlType": "travellers-list-item",
+                "questions": [
+                    { "key": "forename", "label": "Forenamess", "validators": ["required"] },
+                    { "key": "surname", "label": "Surnamess", "validators": ["required"] },
+                    { "key": "age", "label": "Agess", "validators": ["required"], "value": 18 }
+                ],
+                "value": {}
+            },
+            "controlType": "travellers-list"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+<div [formGroup]="group">
+    <mat-chip-list>
+        <mat-chip *ngFor="let region of question.regions" 
+            (click)="selectRegion(region)" 
+            [selected]="regionIsSelected(region)">{{ region.name }}</mat-chip>
+    </mat-chip-list>
+    <div *ngIf="question.countries && question.countries.length>0">
+        <p>{{ 'APP.QUESTIONS.COMPONENT.COUNTRY.ALT' | translate }}
+        <mat-form-field class="example-full-width">
+            <mat-chip-list>
+                <mat-chip 
+                    class="mat-chip-selected mat-primary"
+                    *ngFor="let country of selectedCountries" color="primary" selected="true" removable="true" (remove)="clearCountryChoices()">
+                    {{country.name}} 
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input
+                    *ngIf="selectedCountries.length==0"
+                    matInput
+                    [matAutocomplete]="auto" 
+                    (input)="onFilterChange($event.srcElement.value)" />
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let country of filteredCountries" [value]="country.name" (onSelectionChange)="selectCountry(country)">
+                    <span>{{country.name}}</span>
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field></p>
+    </div>
+</div>

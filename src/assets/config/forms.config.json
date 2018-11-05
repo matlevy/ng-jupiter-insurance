@@ -1,0 +1,8 @@
+{
+    "agentId" : 222,
+    "endpoints": {
+        "countriesEndpoint": "/assets/fixtures/countries.json",
+        "regionsEndpoint": "/assets/fixtures/regions.json",
+        "loggingEndpoint": "http://europa.tif-plc.eu/api/log"
+    }
+}

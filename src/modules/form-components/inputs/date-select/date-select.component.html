@@ -1,0 +1,16 @@
+<div [formGroup]="group">
+    <div [ngSwitch]="state">
+        <mat-form-field *ngSwitchCase="'specific'">
+            <input matInput [matDatepicker]="picker" [formControlName]="question.key"
+                [id]="question.key" value="question.value">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-chip-list *ngSwitchCase="'chips'">
+            <mat-chip *ngFor="let lookahead of question.common" 
+                [selected]="isSelected(lookahead)" 
+                (click)="selectQuickDate(lookahead)">{{ formatLookahead(lookahead) }}</mat-chip>
+            <mat-chip color="accent" (click)="chooseSpecificDate()">{{ 'APP.QUESTIONS.COMPONENT.DATE.SPECIFIC' | translate }}</mat-chip>
+        </mat-chip-list>
+    </div>
+</div>
